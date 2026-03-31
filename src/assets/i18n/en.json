@@ -58,7 +58,9 @@
         "student": "Student",
         "marksheet": "Marksheet",
         "timetable": "Timetable",
-        "faculty": "Faculty"
+        "faculty": "Faculty",
+        "GetMarksheet": "Get Marksheet",
+        "meritlist": "Merit List"
     },
     "LocaleSelect": {
         "Select": "-------Select-------",

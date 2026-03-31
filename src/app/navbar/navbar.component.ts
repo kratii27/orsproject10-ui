@@ -51,4 +51,8 @@ export class NavbarComponent {
     this.form.data.userId = localStorage.getItem("userId");
     this.servicelocator.forward("/myprofile/" + this.form.data.userId);
   }
+
+openDoc() {
+  window.open("assets/doc/index.html", "_blank");
+}
 }

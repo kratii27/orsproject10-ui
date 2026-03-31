@@ -59,7 +59,9 @@
         "student": "छात्र",
         "marksheet": "अंकतालिका",
         "timetable": "समय सारणी",
-        "faculty": "संकाय"
+        "faculty": "संकाय",
+        "GetMarksheet": "अंक तालिका",
+        "meritlist": "मेरिट सूची"
     },
     "LocaleSelect": {
         "Select": "-------चुनें-------",

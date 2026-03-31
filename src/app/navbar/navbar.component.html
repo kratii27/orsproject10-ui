@@ -82,6 +82,10 @@
               translate }}</a>
             <a class="dropdown-item" [routerLink]="['/marksheetlist']"><i class="fa fa-paste"></i> {{
               'Links.MarksheetList' | translate }}</a>
+            <a class="dropdown-item" [routerLink]="['/getmarksheet']"><i class="fa fa-paste"></i> {{
+              'Links.GetMarksheet' | translate }}</a>
+            <a class="dropdown-item" [routerLink]="['/meritlist']"><i class="fa fa-paste"></i> {{
+              'Links.meritlist' | translate }}</a>
           </div>
         </li>
 
@@ -141,6 +145,7 @@
               }}</a>
             <a class="dropdown-item" [routerLink]="['/changepassword']"><i class="fa fa-edit"></i> {{
               'Links.ChangePassword' | translate }}</a>
+            <a class="dropdown-item" (click)="openDoc()"><i class="fa fa-edit"></i>Java Doc</a>
             <a class="dropdown-item" (click)="logout()"><i class="fa fa-sign-out-alt"></i> {{ 'Links.Logout' | translate
               }}</a>
           </div>
