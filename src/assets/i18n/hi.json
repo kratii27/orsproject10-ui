@@ -81,6 +81,7 @@
         "Mobile": "मोबाइल",
         "AlternateMobile": "वैकल्पिक मोबाइल",
         "Status": "स्थिति",
+        "uploadImage": "तस्वीर अपलोड करें",
         "Placeholders": {
             "FirstName": "पहला नाम दर्ज करें",
             "LastName": "अंतिम नाम दर्ज करें",

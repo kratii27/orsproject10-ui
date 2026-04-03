@@ -54,7 +54,7 @@
         "role": "Role",
         "college": "College",
         "course": "Course",
-        "subject": "student",
+        "subject": "Subject",
         "student": "Student",
         "marksheet": "Marksheet",
         "timetable": "Timetable",
@@ -80,6 +80,7 @@
         "Mobile": "Mobile",
         "AlternateMobile": "Alternate Mobile",
         "Status": "Status",
+        "uploadImage": "Upload Image",
         "Placeholders": {
             "FirstName": "Enter First Name",
             "LastName": "Enter Last Name",

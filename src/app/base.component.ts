@@ -9,13 +9,13 @@ import { ActivatedRoute } from "@angular/router";
 export class BaseCtl implements OnInit {
 
     public form: any = {
-        error: false, //error 
-        inputerror: {}, // form input error messages
-        message: null, //error or success message
-        data: { id: null }, //form data
-        searchParams: {}, //search form
-        preload: [], // preload data
-        list: [], // search list 
+        error: false, 
+        inputerror: {}, 
+        message: null, 
+        data: { id: null }, 
+        searchParams: {}, 
+        preload: [], 
+        list: [], 
         pageNo: 0,
         nextListSize: 0
     };
