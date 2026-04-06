@@ -20,16 +20,19 @@ export class LoginComponent {
   };
 
   constructor(private httpService: HttpServiceService, private router: Router, private locator: ServiceLocatorService, private route: ActivatedRoute) {
-   var _self = this;
+    var _self = this;
+
     const errorMessage = this.route.snapshot.queryParams['errorMessage'];
-    if(errorMessage){
+    if (errorMessage) {
       _self.form.error = true;
       _self.form.message = errorMessage;
     }
 
     const nav = this.router.getCurrentNavigation();
     const message = nav?.extras?.state?.['message'];
-    this.form.message = message;
+    if (message) {                          
+      _self.form.message = message;
+    }
   }
 
   signIn() {
@@ -55,7 +58,7 @@ export class LoginComponent {
         localStorage.setItem("lname", res.result.data.lastName);
         localStorage.setItem("userId", res.result.data.id);
         localStorage.setItem('token', 'Bearer ' + res.result.token)
-         _self.router.navigateByUrl('dashboard');
+        _self.router.navigateByUrl('dashboard');
       }
     });
   }

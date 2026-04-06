@@ -54,11 +54,23 @@ export class NavbarComponent {
     this.servicelocator.forward("/myprofile/" + this.form.data.userId);
   }
 
-openDoc() {
-  window.open("assets/doc/index.html", "_blank");
-}
+  openDoc() {
+    window.open("assets/doc/index.html", "_blank");
+  }
 
-handleImage(event:any){
-  event.target.src='assets/files/images.png'
-}
+  handleImage(event: any) {
+    event.target.src = 'assets/files/images.png'
+  }
+
+  isAdmin(): boolean {
+    return localStorage.getItem('role') === 'Admin';
+  }
+
+  isFaculty(): boolean {
+    return localStorage.getItem('role') === 'Faculty';
+  }
+
+  isStudent(): boolean {
+    return localStorage.getItem('role') === 'Student';
+  }
 }
