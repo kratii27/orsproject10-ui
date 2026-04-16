@@ -37,12 +37,12 @@ export class AuthServiceService implements HttpInterceptor {
           });
         }
 
-        if (error.status === 403) {
-          localStorage.clear();
-          this.router.navigate(['/login'], {
-            queryParams: { errorMessage: 'Token is expired... plz login again..!!' },
-          });
-        }
+        // if (error.status === 403) {
+        //   localStorage.clear();
+        //   this.router.navigate(['/login'], {
+        //      queryParams: { errorMessage: error.error.message },
+        //   });
+        // }
         return throwError(error);
       })
     );
