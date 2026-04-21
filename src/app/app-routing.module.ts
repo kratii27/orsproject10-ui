@@ -26,6 +26,8 @@ import { MyprofileComponent } from './user/myprofile.component';
 import { ChangepasswordComponent } from './user/changepassword.component';
 import { GetMarksheetComponent } from './marksheet/get-marksheet.component';
 import { MeritListComponent } from './marksheet/merit-list.component';
+import { FeeComponent } from './fee/fee.component';
+import { FeeListComponent } from './fee/fee-list.component';
 
 const routes: Routes = [
   {
@@ -180,6 +182,18 @@ const routes: Routes = [
   {
     path: 'meritlist',
     component: MeritListComponent
+  },
+  {
+    path: 'fee',
+    component: FeeComponent
+  },
+  {
+    path: 'fee/:id',
+    component: FeeComponent
+  },
+  {
+    path: 'feelist',
+    component: FeeListComponent
   }
 ];
 

@@ -1,0 +1,115 @@
+<style type="text/css">
+.input-group-addon {
+  box-shadow: 9px 8px 7px #001a33;
+}
+
+.hm {
+  background-image: url('assets/files/add.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 75px;
+}
+</style>
+
+<div class="hm">
+  <main>
+    <div class="row pt-3">
+
+      <div class="col-md-4 mb-4"></div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card input-group-addon">
+          <div class="card-body">
+
+            <h3 *ngIf="!form.data.id" class="text-center default-text text-dark">{{ 'FeeStructureForm.AddFeeStructure' | translate }}</h3>
+            <h3 *ngIf="form.data.id > 0" class="text-center default-text text-dark">{{ 'FeeStructureForm.UpdateFeeStructure' | translate }}</h3>
+
+            <div>
+              <H4 align="center">
+                <div *ngIf="!form.error && form.message" class="alert alert-success alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  {{ form.message }}
+                </div>
+              </H4>
+              <H4 align="center">
+                <div *ngIf="form.error && form.message" class="alert alert-danger alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert">&times;</button>
+                  {{ form.message }}
+                </div>
+              </H4>
+            </div>
+
+            <div class="md-form">
+
+              <!-- Course (Dynamic Preload) -->
+              <span class="pl-sm-5"><b>{{ 'FeeStructureForm.Course' | translate }}</b> <span style="color: red;">*</span></span><br>
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-book grey-text" style="font-size: 1rem;"></i></div>
+                  </div>
+                  <select name="courseId" [(ngModel)]="form.data.courseId" class="form-control">
+                    <option value="undefined">{{ 'FeeStructureForm.SelectOptions.Select' | translate }}</option>
+                    <option *ngFor="let obj of form.preload.courseList" [value]="obj.key">{{ obj.value }}</option>
+                  </select>
+                </div>
+              </div>
+              <font color="red" class="pl-sm-5">{{ form.inputerror.courseId }}</font><br>
+
+              <!-- Base Fee -->
+              <span class="pl-sm-5"><b>{{ 'FeeStructureForm.YearlyFee' | translate }}</b> <span style="color: red;">*</span></span><br>
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-money grey-text" style="font-size: 1rem;"></i></div>
+                  </div>
+                  <input type="number" step="0.01" class="form-control" name="baseFee" [(ngModel)]="form.data.baseFee" placeholder="{{ 'FeeStructureForm.Placeholders.BaseFee' | translate }}">
+                </div>
+              </div>
+              <font color="red" class="pl-sm-5">{{ form.inputerror.baseFee }}</font><br>
+
+              <!-- Exam Fee -->
+              <span class="pl-sm-5"><b>{{ 'FeeStructureForm.ExamFee' | translate }}</b> <span style="color: red;">*</span></span><br>
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-credit-card grey-text" style="font-size: 1rem;"></i></div>
+                  </div>
+                  <input type="number" step="0.01" class="form-control" name="examFee" [(ngModel)]="form.data.examFee" placeholder="{{ 'FeeStructureForm.Placeholders.ExamFee' | translate }}">
+                </div>
+              </div>
+              <font color="red" class="pl-sm-5">{{ form.inputerror.examFee }}</font><br>
+
+              <!-- Submission Date -->
+              <span class="pl-sm-5"><b>{{ 'FeeStructureForm.SubmissionDate' | translate }}</b> <span style="color: red;">*</span></span><br>
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-calendar-check-o grey-text" style="font-size: 1rem;"></i></div>
+                  </div>
+                  <input type="date" class="form-control" name="submissionDate" [(ngModel)]="form.data.submissionDate" placeholder="{{ 'FeeStructureForm.Placeholders.SubmissionDate' | translate }}">
+                </div>
+              </div>
+              <font color="red" class="pl-sm-5">{{ form.inputerror.submissionDate }}</font><br>
+
+              <!-- Buttons -->
+              <div *ngIf="!form.data.id" class="text-center">
+                <input type="submit" (click)="submit()" class="btn btn-success btn-md" style="font-size: 17px" value="{{ 'FeeStructureForm.Buttons.Save' | translate }}">&nbsp;
+                <input type="submit" (click)="reset()" class="btn btn-warning btn-md" style="font-size: 17px" value="{{ 'FeeStructureForm.Buttons.reset' | translate }}">
+              </div>
+              <div *ngIf="form.data.id > 0" class="text-center">
+                <input type="submit" (click)="submit()" class="btn btn-success btn-md" style="font-size: 17px" value="{{ 'FeeStructureForm.Buttons.Save' | translate }}">&nbsp;
+                <input type="submit" (click)="forward('/feelist')" class="btn btn-warning btn-md" style="font-size: 17px" value="{{ 'FeeStructureForm.Buttons.List' | translate }}">
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4"></div>
+
+    </div>
+  </main>
+</div>

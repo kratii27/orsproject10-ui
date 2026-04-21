@@ -9,7 +9,6 @@
     "FirstName": "पहला नाम",
     "LastName": "अंतिम नाम",
     "LoginId": "लॉगिन आईडी",
-    "Password": "पासवर्ड",
     "DateOfBirth": "जन्म तिथि",
     "Gender": "लिंग",
     "Mobile": "मोबाइल",
@@ -61,7 +60,10 @@
         "timetable": "समय सारणी",
         "faculty": "संकाय",
         "GetMarksheet": "अंक तालिका",
-        "meritlist": "मेरिट सूची"
+        "meritlist": "मेरिट सूची",
+        "Fee": "शुल्क",
+        "AddFee": "शुल्क संरचना जोड़ें",
+        "FeeList": "शुल्क संरचना सूची"
     },
     "LocaleSelect": {
         "Select": "-------चुनें-------",
@@ -102,6 +104,60 @@
             "Save": "सहेजें",
             "reset": "रीसेट करें",
             "List": "सूची"
+        }
+    },
+    "FeeStructureForm": {
+        "AddFeeStructure": "शुल्क संरचना जोड़ें",
+        "UpdateFeeStructure": "शुल्क संरचना अपडेट करें",
+        "Course": "पाठ्यक्रम",
+        "YearlyFee": "वार्षिक शुल्क",
+        "ExamFee": "परीक्षा शुल्क",
+        "SubmissionDate": "जमा करने की तिथि",
+        "SelectOptions": {
+            "Select": "------------चुनें------------"
+        },
+        "Placeholders": {
+            "BaseFee": "वार्षिक शुल्क दर्ज करें",
+            "ExamFee": "परीक्षा शुल्क दर्ज करें",
+            "SubmissionDate": "जमा करने की तिथि चुनें"
+        },
+        "Buttons": {
+            "Save": "सहेजें",
+            "reset": "रीसेट करें",
+            "List": "सूची"
+        }
+    },
+    "FeeStructureList": {
+        "Title": "शुल्क संरचना सूची",
+        "EmptyTitle": "शुल्क संरचना सूची",
+        "SelectOptions": {
+            "SelectCourse": "------------पाठ्यक्रम चुनें------------",
+            "SelectYear": "------------वर्ष चुनें------------",
+            "FirstYear": "प्रथम वर्ष",
+            "SecondYear": "द्वितीय वर्ष",
+            "ThirdYear": "तृतीय वर्ष",
+            "FourthYear": "चतुर्थ वर्ष"
+        },
+        "Placeholders": {
+            "SubmissionDate": "जमा करने की तिथि"
+        },
+        "Buttons": {
+            "Search": "खोजें",
+            "Reset": "रीसेट करें",
+            "Previous": "पिछला",
+            "New": "नया",
+            "Delete": "हटाएं",
+            "Next": "अगला",
+            "Back": "वापस"
+        },
+        "Table": {
+            "SNo": "क्र.सं.",
+            "CourseName": "पाठ्यक्रम का नाम",
+            "YearlyFees": "वार्षिक शुल्क",
+            "ExamFee": "परीक्षा शुल्क",
+            "SubmissionDate": "जमा करने की तिथि",
+            "Edit": "संपादित करें",
+            "EditLink": "संपादित करें"
         }
     }
 }
