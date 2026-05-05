@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FeeComponent extends BaseCtl {
 
+  
   constructor(public locator: ServiceLocatorService, route: ActivatedRoute){
     super(locator.endpoints.FEE, locator, route);
   }

@@ -12,5 +12,6 @@ export class FeeListComponent extends BaseListCtl {
   constructor(locator: ServiceLocatorService, route: ActivatedRoute){
       super(locator.endpoints.FEE, locator, route);
     }
+    
 
 }

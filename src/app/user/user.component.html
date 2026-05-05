@@ -59,8 +59,8 @@
                       src="http://localhost:8081/User/profilePic/{{form.data.id}}" alt="profile" class="img"
                       align="center"></td>
                 </tr>
-                </div>
-                <br>
+              </div>
+              <br>
               <!-- First Name -->
               <span class="pl-sm-5"><b>{{ 'UserForm.FirstName' | translate }}</b> <span
                   style="color: red;">*</span></span><br>
@@ -120,20 +120,26 @@
               <font color="red" class="pl-sm-5">{{ form.inputerror.password }}</font><br>
 
               <!-- Date of Birth -->
-              <span class="pl-sm-5"><b>{{ 'UserForm.DateOfBirth' | translate }}</b> <span
-                  style="color: red;">*</span></span><br>
+              <!-- Date of Birth -->
+              <span class="pl-sm-5">
+                <b>{{ 'UserForm.DateOfBirth' | translate }}</b>
+                <span style="color: red;">*</span>
+              </span><br>
+
               <div class="col-sm-12">
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i>
+                    <div class="input-group-text">
+                      <i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i>
                     </div>
                   </div>
-                  <input type="date" class="form-control" name="dob" [(ngModel)]="form.data.dob"
-                    [ngModel]="form.data.dob | date:'yyyy-MM-dd'">
+                  <!-- readonly so user can only pick via calendar, not type manually -->
+                  <input type="text" id="dob" class="form-control" readonly placeholder="DD/MM/YYYY"
+                    style="background: white; cursor: pointer;">
                 </div>
               </div>
-              <font color="red" class="pl-sm-5">{{ form.inputerror.dob }}</font><br>
 
+              <font color="red" class="pl-sm-5">{{ form.inputerror.dob }}</font><br>
               <!-- Gender -->
               <span class="pl-sm-5"><b>{{ 'UserForm.Gender' | translate }}</b> <span
                   style="color: red;">*</span></span><br>
@@ -217,19 +223,19 @@
               <font color="red" class="pl-sm-5">{{ form.inputerror.status }}</font><br>
 
               <span class="pl-sm-5"><b>{{ 'UserForm.uploadImage' | translate }}</b></span><br>
-                <div class="col-sm-12">
-                  <div class="input-group">
-                    <div class="input-group-prepend">
-                      <div class="input-group-text"><i class="fa fa-image grey-text" style="font-size: 1rem;"></i></div>
-                    </div>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" name="imageId" (change)="onFileSelect($event)"
-                        accept="image/*">
-                      <label class="custom-file-label">add image</label>
-                    </div>
+              <div class="col-sm-12">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fa fa-image grey-text" style="font-size: 1rem;"></i></div>
+                  </div>
+                  <div class="custom-file">
+                    <input type="file" class="custom-file-input" name="imageId" (change)="onFileSelect($event)"
+                      accept="image/*">
+                    <label class="custom-file-label">add image</label>
                   </div>
                 </div>
-                <br>
+              </div>
+              <br>
 
               <!-- Buttons -->
               <div *ngIf="!form.data.id" class="text-center">

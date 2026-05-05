@@ -81,6 +81,7 @@
               </div>
               <font color="red" class="pl-sm-5">{{ form.inputerror.examFee }}</font><br>
 
+              
               <!-- Submission Date -->
               <span class="pl-sm-5"><b>{{ 'FeeStructureForm.SubmissionDate' | translate }}</b> <span style="color: red;">*</span></span><br>
               <div class="col-sm-12">
@@ -88,7 +89,7 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text"><i class="fa fa-calendar-check-o grey-text" style="font-size: 1rem;"></i></div>
                   </div>
-                  <input type="date" class="form-control" name="submissionDate" [(ngModel)]="form.data.submissionDate" placeholder="{{ 'FeeStructureForm.Placeholders.SubmissionDate' | translate }}">
+                  <input type="date" class="form-control" name="submissionDate" [(ngModel)]="form.data.submissionDate"  [ngModel]="form.data.submissionDate | date:'yyyy-MM-dd'" placeholder="{{ 'FeeStructureForm.Placeholders.SubmissionDate' | translate }}">
                 </div>
               </div>
               <font color="red" class="pl-sm-5">{{ form.inputerror.submissionDate }}</font><br>
